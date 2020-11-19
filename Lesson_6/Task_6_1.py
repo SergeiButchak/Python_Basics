@@ -14,9 +14,6 @@ from time import sleep
 class TrafficLight:
     __color = "Красный"
 
-    # def __init__(self):
-    #     print(self.__color)
-
     def running(self, cycle):
         mode_time = {
             "Желтый": 2,
