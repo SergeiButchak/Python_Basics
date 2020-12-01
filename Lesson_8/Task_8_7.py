@@ -22,10 +22,13 @@ class Complex:
         return Complex(re, im)
 
     def __str__(self):
-        return f"({self.__re} + {self.__im}i)"
+        if self.__im < 0:
+            return f"({self.__re} - {-1 * self.__im}i)"
+        else:
+            return f"({self.__re} + {self.__im}i)"
 
 
 c_a = Complex(4, 3)
 c_b = Complex(0, -1)
-print(c_a + c_b)
-print(c_b * c_b)
+print(f"{c_a} + {c_b} = {c_a + c_b}")
+print(f"{c_b} * {c_b} = {c_b * c_b}")
